@@ -89,6 +89,7 @@ def mix_object(current_labeled_image=None, current_labeled_mask=None, cut_object
         w_start_point = 0
         w_end_point = 0
 
+    current_labeled_image = current_labeled_image.copy()
     current_labeled_image[h_start_point:h_end_point, w_start_point:w_end_point, :][np.where(idx == 254)] = \
         cut_object_image[np.where(idx == 254)]
     current_labeled_mask[h_start_point:h_end_point, w_start_point:w_end_point][np.where(cut_object_mask == 254)] = \
@@ -138,7 +139,7 @@ class MaskFormerSemanticDatasetMapper:
         self.size_divisibility = size_divisibility
         self.is_ood_ft = is_ood_ft
         self.anomaly_mix_ratio = anomaly_mix_ratio
-        self.anomaly_file_path = [anomaly_file_path]
+        self.anomaly_file_path = anomaly_file_path
         self.gt_list = glob.glob(self.anomaly_file_path)
 
         logger = logging.getLogger(__name__)
