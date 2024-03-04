@@ -1,0 +1,39 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
+// https://github.com/microsoft/vscode-dev-containers/tree/v0.183.0/containers/ubuntu
+{
+  "name": "Ubuntu2004DevEnv",
+  "dockerComposeFile": "../docker-compose.yml",
+  "service": "mask2anomaly",
+  "workspaceFolder": "/home/user/Mask2Anomaly",
+  "shutdownAction": "stopCompose",
+  "customizations":{
+  "vscode":{
+    "settings": {
+      "terminal.integrated.profiles.linux": {
+        "zsh": {
+          "path": "/bin/zsh"
+        }
+      },
+      "terminal.integrated.defaultProfile.linux": "zsh",
+      "python.defaultInterpreterPath": "/home/user/miniconda/bin/python"
+    },
+
+    // Add the IDs of extensions you want installed when the container is created.
+    "extensions": [
+      "ms-python.python",
+      "ms-python.vscode-pylance",
+      "ms-python.autopep8",
+      "ms-python.pylint",
+      "eamodio.gitlens",
+      "ms-toolsai.jupyter",
+      "christian-kohler.path-intellisense",
+      "sleistner.vscode-fileutils",
+      "exodiusstudios.comment-anchors",
+      "shd101wyy.markdown-preview-enhanced",        
+      "github.copilot",
+      "github.copilot-chat"
+    ]
+  }
+  },
+  "remoteUser": "user"
+}

@@ -118,5 +118,5 @@ def add_maskformer2_config(cfg):
     cfg.MODEL.MASK_FORMER.OOD_LOSS = 'margin'
     cfg.MODEL.MASK_FORMER.MARGIN = 1.0
     cfg.MODEL.MASK_FORMER.ANOMALY_MIX_RATIO = 0.2
-    cfg.MODEL.MASK_FORMER.ANOMALY_FILEPATH = "/home/shyam/Mask2Former/datasets/COCO_S1/ood_annotations/*.png" #Change Path
+    cfg.MODEL.MASK_FORMER.ANOMALY_FILEPATH = "/home/user/Mask2Anomaly/datasets/COCO_S1/ood_annotations/*.png" #Change Path
 
