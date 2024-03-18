@@ -15,7 +15,9 @@
         }
       },
       "terminal.integrated.defaultProfile.linux": "zsh",
-      "python.defaultInterpreterPath": "/home/user/miniconda/bin/python"
+      "python.analysis.extraPaths": [
+        "/opt/ros/noetic/lib/python3/dist-packages"
+      ]
     },
 
     // Add the IDs of extensions you want installed when the container is created.

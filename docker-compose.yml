@@ -1,11 +1,13 @@
 version: "3.8"
 services:
   mask2anomaly:
-    image: phatli/mask2anomaly
+    image: phatli/mask2anomaly:ros
     stdin_open: true
     tty: true
     ipc: host
     user: "${UID}:${GID}"
+    privileged: true
+    network_mode: host
     deploy:
       resources:
         reservations:

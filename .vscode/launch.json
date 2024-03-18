@@ -14,6 +14,13 @@
                 "--num-gpus=1",
                 "--config-file=configs/cityscapes/semantic-segmentation/anomaly_ft.yaml"
             ]
+        },
+        {
+            "name": "Ros_node",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "ros/infer_node.py",
+            "console": "integratedTerminal"
         }
     ]
 }
